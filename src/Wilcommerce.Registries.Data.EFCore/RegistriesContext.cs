@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Wilcommerce.Registries.Data.EFCore.Mapping;
 using Wilcommerce.Registries.Models;
 
 namespace Wilcommerce.Registries.Data.EFCore
@@ -51,6 +52,20 @@ namespace Wilcommerce.Registries.Data.EFCore
         {
             base.OnConfiguring(optionsBuilder);
             optionsBuilder.UseLazyLoadingProxies();
+        }
+
+        /// <summary>
+        /// Override the <see cref="DbContext.OnModelCreating(ModelBuilder)"/>
+        /// </summary>
+        /// <param name="modelBuilder">The model builder instance</param>
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder
+                .MapCustomers()
+                .MapShippingAddresses()
+                .MapBillingInfos();
+
+            base.OnModelCreating(modelBuilder);
         }
     }
 }
