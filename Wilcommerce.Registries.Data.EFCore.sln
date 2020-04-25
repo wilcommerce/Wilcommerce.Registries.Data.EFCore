@@ -3,9 +3,26 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E30E2332-EF45-4813-B0C4-BDDB0218DDC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wilcommerce.Registries.Data.EFCore", "src\Wilcommerce.Registries.Data.EFCore\Wilcommerce.Registries.Data.EFCore.csproj", "{C55FF9C5-4714-4F8D-AB61-C912037CBE01}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C55FF9C5-4714-4F8D-AB61-C912037CBE01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C55FF9C5-4714-4F8D-AB61-C912037CBE01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C55FF9C5-4714-4F8D-AB61-C912037CBE01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C55FF9C5-4714-4F8D-AB61-C912037CBE01}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C55FF9C5-4714-4F8D-AB61-C912037CBE01} = {E30E2332-EF45-4813-B0C4-BDDB0218DDC1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AC766980-3B62-4A54-B77A-BF0B88BDB9B8}
