@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
@@ -13,7 +13,7 @@
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
-    <Version>1.0.1-beta1</Version>
+    <Version>1.0.0-beta1</Version>
     <Description>Wilcommerce Registries implementation for Entity Framework Core</Description>
     <Title>Wilcommerce.Registries.Data.EFCore</Title>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
