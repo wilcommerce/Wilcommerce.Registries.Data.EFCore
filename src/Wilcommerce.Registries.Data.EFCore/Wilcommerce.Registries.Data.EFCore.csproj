@@ -1,8 +1,35 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
+    <VersionPrefix>1.0.0-beta1</VersionPrefix>
+    <AssemblyName>Wilcommerce.Registries.Data.EFCore</AssemblyName>
+    <PackageId>Wilcommerce.Registries.Data.EFCore</PackageId>
+    <PackageTags>wilcommerce;ecommerce;opensource;.netcore;.net;entity framework core;registries</PackageTags>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageProjectUrl>https://github.com/wilcommerce/Wilcommerce.Registries.Data.EFCore</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/wilcommerce/Wilcommerce.Registries.Data.EFCore</RepositoryUrl>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <Version>1.0.0-beta1</Version>
+    <Description>Wilcommerce Registries implementation for Entity Framework Core</Description>
+    <Title>Wilcommerce.Registries.Data.EFCore</Title>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
+
+  <PropertyGroup>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DocumentationFile>bin\Debug\netstandard2.1\Wilcommerce.Registries.Data.EFCore.xml</DocumentationFile>
