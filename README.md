@@ -1,6 +1,9 @@
 # Wilcommerce.Registries.Data.EFCore
 Contains an implementation of [Wilcommerce.Registries](https://github.com/wilcommerce/Wilcommerce.Registries/) package using Entity Framework Core as persistence framework.
 
+## Installation
+Nuget package available here [https://www.nuget.org/packages/Wilcommerce.Registries.Data.EFCore](https://www.nuget.org/packages/Wilcommerce.Registries.Data.EFCore)
+
 ## Requirements
 According to Entity Framework Core 3.1 requirements, this project is built using NETStandard 2.1 as Target Framework (See [https://docs.microsoft.com/it-it/ef/core/what-is-new/ef-core-3.0/breaking-changes#netstandard21](https://docs.microsoft.com/it-it/ef/core/what-is-new/ef-core-3.0/breaking-changes#netstandard21) for further informations).
 
