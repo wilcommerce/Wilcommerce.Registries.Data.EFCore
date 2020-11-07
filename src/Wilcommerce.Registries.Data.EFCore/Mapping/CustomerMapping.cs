@@ -32,6 +32,13 @@ namespace Wilcommerce.Registries.Data.EFCore.Mapping
                 .HasValue<Company>(nameof(Company));
             customerEntity.Property("CustomerType").HasMaxLength(255);
 
+            customerEntity.OwnsOne(c => c.Account);
+
+            customerEntity.Ignore(c => c.HasAccount);
+
+            MapPeople(modelBuilder);
+            MapCompanies(modelBuilder);
+
             customerEntity
                 .HasMany(c => c.ShippingAddresses)
                 .WithOne(s => s.Customer);
@@ -39,13 +46,6 @@ namespace Wilcommerce.Registries.Data.EFCore.Mapping
             customerEntity
                 .HasMany(c => c.BillingInformation)
                 .WithOne(b => b.Customer);
-
-            customerEntity.OwnsOne(c => c.Account);
-
-            customerEntity.Ignore(c => c.HasAccount);
-
-            MapPeople(modelBuilder);
-            MapCompanies(modelBuilder);
 
             return modelBuilder;
         }
