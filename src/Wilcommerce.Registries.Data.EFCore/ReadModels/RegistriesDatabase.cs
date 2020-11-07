@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Linq;
 using Wilcommerce.Registries.Models;
 using Wilcommerce.Registries.ReadModels;
@@ -27,16 +28,16 @@ namespace Wilcommerce.Registries.Data.EFCore.ReadModels
         /// <summary>
         /// Get the list of customers
         /// </summary>
-        public IQueryable<Customer> Customers => _context.Customers;
+        public IQueryable<Customer> Customers => _context.Customers.AsNoTracking();
 
         /// <summary>
         /// Get the list of shipping addresses
         /// </summary>
-        public IQueryable<ShippingAddress> ShippingAddresses => _context.ShippingAddresses;
+        public IQueryable<ShippingAddress> ShippingAddresses => _context.ShippingAddresses.AsNoTracking();
 
         /// <summary>
         /// Get the list of billing infos
         /// </summary>
-        public IQueryable<BillingInfo> BillingInfos => _context.BillingInfos;
+        public IQueryable<BillingInfo> BillingInfos => _context.BillingInfos.AsNoTracking();
     }
 }

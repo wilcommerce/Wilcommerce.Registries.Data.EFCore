@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Wilcommerce.Registries.Data.EFCore.ReadModels;
 using Wilcommerce.Registries.Data.EFCore.Test.Fixtures;
 using Xunit;
@@ -29,7 +30,7 @@ namespace Wilcommerce.Registries.Data.EFCore.Test.ReadModels
             var database = new RegistriesDatabase(_fixture.Context);
             var customers = database.Customers;
 
-            Assert.Equal(_fixture.Context.Customers, customers);
+            Assert.Equal(_fixture.Context.Customers.Count(), customers.Count());
         }
 
         [Fact]
@@ -38,7 +39,7 @@ namespace Wilcommerce.Registries.Data.EFCore.Test.ReadModels
             var database = new RegistriesDatabase(_fixture.Context);
             var shippingAddresses = database.ShippingAddresses;
 
-            Assert.Equal(_fixture.Context.ShippingAddresses, shippingAddresses);
+            Assert.Equal(_fixture.Context.ShippingAddresses.Count(), shippingAddresses.Count());
         }
 
         [Fact]
